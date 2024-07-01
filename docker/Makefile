@@ -18,7 +18,6 @@ start:
 stop:
 	$(COMPOSE) down
 
-
 # Restart Docker containers
 restart: stop start
 
