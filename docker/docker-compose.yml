@@ -2,11 +2,13 @@ version: '3.8'
 
 services:
   php:
-    build: ..
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
     ports:
       - "8080:80"
     volumes:
-      - ./news-website:/var/www/html
+      - ./../news-website:/var/www/html
     depends_on:
       - mysql
 
@@ -19,5 +21,7 @@ services:
       MYSQL_USER: zizi
       MYSQL_PASSWORD: 123456
     volumes:
-      - ./mysql-data:/var/lib/mysql
+      - ./../mysql-data:/var/lib/mysql
 
+volumes:
+  mysql-data:
