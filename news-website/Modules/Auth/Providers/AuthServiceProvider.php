@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Front\Providers;
+namespace Modules\Auth\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class FrontServiceProvider extends ServiceProvider
+class AuthServiceProvider extends ServiceProvider
 {
     public function register()
     {
@@ -14,6 +14,6 @@ class FrontServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
-        $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'Front');
+        $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'Auth');
     }
 }

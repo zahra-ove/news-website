@@ -7,4 +7,5 @@ return [
      * Modules service providers
      */
     Modules\Front\Providers\FrontServiceProvider::class,
+    Modules\Auth\Providers\AuthServiceProvider::class,
 ];

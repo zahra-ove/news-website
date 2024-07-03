@@ -117,6 +117,7 @@
       <excludeFolder url="file://$MODULE_DIR$/news-website/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/news-website/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/news-website/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/news-website/vendor/laravel/breeze" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
