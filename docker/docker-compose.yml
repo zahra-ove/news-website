@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   php:
+    container_name: laravel_app
     build:
       context: ..
       dockerfile: docker/Dockerfile
@@ -10,9 +11,9 @@ services:
     volumes:
       - ./../news-website:/var/www/html
     depends_on:
-      - mysql
+      - mysql_db
 
-  mysql:
+  mysql_db:
     image: mysql:8.0
     restart: always
     environment:
@@ -20,6 +21,8 @@ services:
       MYSQL_DATABASE: newssite
       MYSQL_USER: zizi
       MYSQL_PASSWORD: 123456
+    ports:
+      - "3306:3306"
     volumes:
       - ./../mysql-data:/var/lib/mysql
 

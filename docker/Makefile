@@ -8,7 +8,7 @@ setup:
 
 # Build Docker containers
 build:
-	$(COMPOSE) build
+	$(COMPOSE) build --no-cache --force-rm
 
 # Start Docker containers
 start:

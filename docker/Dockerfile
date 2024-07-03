@@ -6,15 +6,16 @@ WORKDIR /var/www/html
 
 # Update the package manager and install necessary packages
 RUN apt-get update && apt-get install -y \
-    zip \
-    unzip \
+    unzip zip \
     git \
     curl \
+    libmariadb-dev \
+    libicu-dev \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd \
+    && docker-php-ext-install gettext gd \
     && docker-php-ext-install mysqli pdo pdo_mysql \
     && docker-php-ext-enable gd mysqli pdo pdo_mysql
 
